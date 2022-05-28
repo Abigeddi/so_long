@@ -6,7 +6,7 @@
 #    By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/28 08:32:15 by abigeddi          #+#    #+#              #
-#    Updated: 2022/05/28 08:53:24 by abigeddi         ###   ########.fr        #
+#    Updated: 2022/05/28 14:11:34 by abigeddi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ SRC = 	so_long.c\
 		get_next_line/get_next_line.c\
 		get_next_line/get_next_line_utils.c\
 		main.c\
+		draw.c\
 		checkmap.c\
 		checkmap2.c\
 		checkmap3.c\
@@ -36,21 +37,21 @@ OBJ = $(SRC:.c=.o)
 
 all:$(NAME)
 
-$(NAME) : ft_printf ft_libft $(OBJ) $(HEADER)
+$(NAME) : printf ft_libft $(OBJ) $(HEADER)
 	$(CC) $(CFLAGS) $(MLX_FLAGS) $(OBJ) libft/libft.a ft_printf/libftprintf.a -o $(NAME)
 
 ft_libft :
 	@$(MAKE) libft
 
-ft_printf :
+printf :
 	@$(MAKE) ft_printf
 
 clean :
-	@rm -f GNL/*.o && rm -f bonus/GNL/*.o
-	@$(MAKE) libft clean && $(MAKE) printf clean
+	@rm -f get_next_line/*.o && rm -f $(OBJ)
+	@$(MAKE) libft clean && $(MAKE) ft_printf clean
 
 fclean : clean	
-	@$(MAKE) libft fclean && $(MAKE) printf fclean
+	@$(MAKE) libft fclean && $(MAKE) ft_printf fclean
 	@rm -f so_long 
 
 re : fclean all

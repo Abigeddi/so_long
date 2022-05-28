@@ -6,7 +6,7 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 19:39:15 by abigeddi          #+#    #+#             */
-/*   Updated: 2022/05/28 08:22:12 by abigeddi         ###   ########.fr       */
+/*   Updated: 2022/05/28 14:19:52 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,8 @@ int		key_hook(int keycode, t_map *vars);
 int		quit(t_map *v);
 void	exit_door(t_map ***v);
 void	put_text(t_map ***v);
-
+void	put_image(t_map ***v, int x, int y, char *img);
+void	put_image_to_map(char p, int x1, int y1, t_map **v);
+void	render_map(t_map *vars);
 #endif
 

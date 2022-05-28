@@ -6,7 +6,7 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/26 16:48:21 by abigeddi          #+#    #+#             */
-/*   Updated: 2022/05/28 08:30:04 by abigeddi         ###   ########.fr       */
+/*   Updated: 2022/05/28 14:19:38 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,10 @@ int main(int ac,char **av)
         var.mlx_ptr = mlx_init();
         var.mlx_win = mlx_new_window(var.mlx_ptr, var.imgwidth * 64,
 				var.imgheight * 64, "So_Long");
+        render_map(&var);
         ft_printf("\033[1;33m== Start Game ==\033[0m\n");
         mlx_hook(var.mlx_win, 2, 0, key_hook, &var);
-		mlx_hook(var.mlx_win, 17, 0, quit, &var);
-		mlx_loop(var.mlx_ptr);
+		    mlx_hook(var.mlx_win, 17, 0, quit, &var);
+	    	mlx_loop(var.mlx_ptr);
     }
 }
