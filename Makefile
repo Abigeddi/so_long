@@ -6,7 +6,7 @@
 #    By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/28 08:32:15 by abigeddi          #+#    #+#              #
-#    Updated: 2022/05/28 14:11:34 by abigeddi         ###   ########.fr        #
+#    Updated: 2022/05/30 10:56:26 by abigeddi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,6 +52,6 @@ clean :
 
 fclean : clean	
 	@$(MAKE) libft fclean && $(MAKE) ft_printf fclean
-	@rm -f so_long 
+	@rm -f so_long
 
 re : fclean all
