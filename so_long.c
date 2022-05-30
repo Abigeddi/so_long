@@ -6,13 +6,13 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 20:12:04 by abigeddi          #+#    #+#             */
-/*   Updated: 2022/05/28 08:19:44 by abigeddi         ###   ########.fr       */
+/*   Updated: 2022/05/29 14:21:29 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void var_init(t_map *var)
+void	var_init(t_map *var)
 {
 	var->collectible = 0;
 	var->player = 0;

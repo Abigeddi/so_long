@@ -6,11 +6,9 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 20:42:43 by abigeddi          #+#    #+#             */
-/*   Updated: 2022/05/21 21:36:34 by abigeddi         ###   ########.fr       */
+/*   Updated: 2022/05/30 10:28:34 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 #include "so_long.h"
 
@@ -37,6 +35,7 @@ int	ft_strlen_nl(char *str)
 	}
 	return (i);
 }
+
 void	ft_free(t_map ***var, char *err)
 {
 	int	i;
@@ -52,11 +51,11 @@ void	ft_free(t_map ***var, char *err)
 	exit(1);
 }
 
-void is_rectangular(t_map **var)
+void	is_rectangular(t_map **var)
 {
 	int	tmp;
 	int	i;
-	
+
 	i = 0;
 	(*var)->imgheight = get_height((*var)->map);
 	(*var)->imgwidth = ft_strlen_nl((*var)->map[i]);
@@ -64,11 +63,10 @@ void is_rectangular(t_map **var)
 	while (tmp > 0)
 	{
 		if ((*var)->imgwidth != ft_strlen_nl((*var)->map[i]))
-			ft_free(&var,"Error: Map is not revtangular");
+			ft_free(&var, "Error: Map is not revtangular");
 		i++;
 		tmp--;
 	}
-	
 }
 
 void	check_map(t_map *var)

@@ -1,0 +1,64 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/abigeddi/Desktop/so_long'
+make -C ft_printf
+make[1]: Entering directory `/Users/abigeddi/Desktop/so_long/ft_printf'
+cc -Wall -Werror -Wextra   -c -o ft_printf.o ft_printf.c
+cc -Wall -Werror -Wextra   -c -o ft_putchar.o ft_putchar.c
+cc -Wall -Werror -Wextra   -c -o ft_puthex.o ft_puthex.c
+cc -Wall -Werror -Wextra   -c -o ft_putnbr.o ft_putnbr.c
+cc -Wall -Werror -Wextra   -c -o ft_putstr.o ft_putstr.c
+cc -Wall -Werror -Wextra   -c -o ft_putud.o ft_putud.c
+gcc -c -Wall -Werror -Wextra ft_printf.c ft_putchar.c ft_puthex.c ft_putnbr.c ft_putstr.c ft_putud.c -I ft_printf.h
+ar -rc libftprintf.a ft_printf.o ft_putchar.o ft_puthex.o ft_putnbr.o ft_putstr.o ft_putud.o
+make[1]: Leaving directory `/Users/abigeddi/Desktop/so_long/ft_printf'
+make -C libft
+ 
+make[1]: Entering directory `/Users/abigeddi/Desktop/so_long/libft'
+gcc -c -Wall -Wextra -Werror ft_atoi.c -o ft_atoi.o
+gcc -c -Wall -Wextra -Werror ft_bzero.c -o ft_bzero.o
+gcc -c -Wall -Wextra -Werror ft_calloc.c -o ft_calloc.o
+gcc -c -Wall -Wextra -Werror ft_isalnum.c -o ft_isalnum.o
+gcc -c -Wall -Wextra -Werror ft_isalpha.c -o ft_isalpha.o
+gcc -c -Wall -Wextra -Werror ft_isascii.c -o ft_isascii.o
+gcc -c -Wall -Wextra -Werror ft_isdigit.c -o ft_isdigit.o
+gcc -c -Wall -Wextra -Werror ft_isprint.c -o ft_isprint.o
+gcc -c -Wall -Wextra -Werror ft_itoa.c -o ft_itoa.o
+gcc -c -Wall -Wextra -Werror ft_memchr.c -o ft_memchr.o
+gcc -c -Wall -Wextra -Werror ft_memcmp.c -o ft_memcmp.o
+gcc -c -Wall -Wextra -Werror ft_memcpy.c -o ft_memcpy.o
+gcc -c -Wall -Wextra -Werror ft_memmove.c -o ft_memmove.o
+gcc -c -Wall -Wextra -Werror ft_memset.c -o ft_memset.o
+gcc -c -Wall -Wextra -Werror ft_putchar_fd.c -o ft_putchar_fd.o
+gcc -c -Wall -Wextra -Werror ft_putendl_fd.c -o ft_putendl_fd.o
+gcc -c -Wall -Wextra -Werror ft_putnbr_fd.c -o ft_putnbr_fd.o
+gcc -c -Wall -Wextra -Werror ft_putstr_fd.c -o ft_putstr_fd.o
+gcc -c -Wall -Wextra -Werror ft_split.c -o ft_split.o
+gcc -c -Wall -Wextra -Werror ft_strdup.c -o ft_strdup.o
+gcc -c -Wall -Wextra -Werror ft_striteri.c -o ft_striteri.o
+gcc -c -Wall -Wextra -Werror ft_strjoin.c -o ft_strjoin.o
+gcc -c -Wall -Wextra -Werror ft_strlcat.c -o ft_strlcat.o
+gcc -c -Wall -Wextra -Werror ft_strlcpy.c -o ft_strlcpy.o
+gcc -c -Wall -Wextra -Werror ft_strlen.c -o ft_strlen.o
+gcc -c -Wall -Wextra -Werror ft_strmapi.c -o ft_strmapi.o
+gcc -c -Wall -Wextra -Werror ft_strncmp.c -o ft_strncmp.o
+gcc -c -Wall -Wextra -Werror ft_strnstr.c -o ft_strnstr.o
+gcc -c -Wall -Wextra -Werror ft_strrchr.c -o ft_strrchr.o
+gcc -c -Wall -Wextra -Werror ft_strtrim.c -o ft_strtrim.o
+gcc -c -Wall -Wextra -Werror ft_substr.c -o ft_substr.o
+gcc -c -Wall -Wextra -Werror ft_tolower.c -o ft_tolower.o
+gcc -c -Wall -Wextra -Werror ft_toupper.c -o ft_toupper.o
+ar rc libft.a ft_atoi.o ft_bzero.o ft_calloc.o ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o ft_isprint.o ft_itoa.o ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memmove.o ft_memset.o ft_putchar_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_putstr_fd.o ft_split.o ft_strdup.o ft_striteri.o ft_strjoin.o ft_strlcat.o ft_strlcpy.o ft_strlen.o ft_strmapi.o ft_strncmp.o ft_strnstr.o ft_strrchr.o ft_strtrim.o ft_substr.o ft_tolower.o ft_toupper.o
+make[1]: Leaving directory `/Users/abigeddi/Desktop/so_long/libft'
+gcc -Wall -Wextra -Werror   -c -o so_long.o so_long.c
+gcc -Wall -Wextra -Werror   -c -o get_next_line/get_next_line.o get_next_line/get_next_line.c
+gcc -Wall -Wextra -Werror   -c -o get_next_line/get_next_line_utils.o get_next_line/get_next_line_utils.c
+gcc -Wall -Wextra -Werror   -c -o main.o main.c
+gcc -Wall -Wextra -Werror   -c -o draw.o draw.c
+gcc -Wall -Wextra -Werror   -c -o checkmap.o checkmap.c
+gcc -Wall -Wextra -Werror   -c -o checkmap2.o checkmap2.c
+gcc -Wall -Wextra -Werror   -c -o checkmap3.o checkmap3.c
+gcc -Wall -Wextra -Werror   -c -o player.o player.c
+gcc -Wall -Wextra -Werror   -c -o moves.o moves.c
+gcc -Wall -Wextra -Werror -lmlx -framework OpenGL -framework AppKit so_long.o get_next_line/get_next_line.o get_next_line/get_next_line_utils.o main.o draw.o checkmap.o checkmap2.o checkmap3.o player.o moves.o libft/libft.a ft_printf/libftprintf.a -o so_long
+make: Leaving directory `/Users/abigeddi/Desktop/so_long'
+ 

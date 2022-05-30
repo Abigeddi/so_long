@@ -6,7 +6,7 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 14:05:47 by abigeddi          #+#    #+#             */
-/*   Updated: 2022/05/28 18:17:36 by abigeddi         ###   ########.fr       */
+/*   Updated: 2022/05/30 10:22:26 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,4 +71,3 @@ void	put_image_to_map(char p, int x1, int y1, t_map **v)
 	else
 		put_image(&v, x1, y1, "./img/tile0.xpm");
 }
-

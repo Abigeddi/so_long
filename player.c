@@ -6,7 +6,7 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 20:54:25 by abigeddi          #+#    #+#             */
-/*   Updated: 2022/05/25 21:18:03 by abigeddi         ###   ########.fr       */
+/*   Updated: 2022/05/30 10:36:50 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 int	key_hook(int keycode, t_map *vars)
 {
 	int	i;
-	
+
 	if (keycode == 2 || keycode == 124)
 		to_right(&vars);
 	else if (keycode == 0 || keycode == 123)
@@ -60,7 +60,7 @@ int	quit(t_map *v)
 
 void	exit_door(t_map ***v)
 {
-		int	i;
+	int	i;
 
 	i = 0;
 	while ((**v)->map[i])
@@ -71,13 +71,13 @@ void	exit_door(t_map ***v)
 	free((**v)->map);
 	ft_printf("END\n");
 	mlx_destroy_window((**v)->mlx_ptr, (**v)->mlx_win);
-	exit (1);	
+	exit (1);
 }
 
 void	put_text(t_map ***v)
 {
 	char	*num;
-	
+
 	num = ft_itoa(++(**v)->moves);
 	ft_printf("STEPS :%s\n", num);
 	free(num);
